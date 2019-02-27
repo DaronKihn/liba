@@ -6,13 +6,13 @@
 #    By: dkihn <dkihn@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/27 17:42:58 by dkihn             #+#    #+#              #
-#    Updated: 2019/02/27 17:49:00 by dkihn            ###   ########.fr        #
+#    Updated: 2019/02/14 22:10:11 by dkihn            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS = ./*.c ./libft.h
+SRCS = srcs/*.c srcs/libft.h
 
 
 

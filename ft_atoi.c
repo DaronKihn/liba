@@ -6,7 +6,7 @@
 /*   By: dkihn <dkihn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/28 18:11:19 by dkihn             #+#    #+#             */
-/*   Updated: 2019/02/26 11:46:55 by dkihn            ###   ########.fr       */
+/*   Updated: 2019/02/27 17:39:37 by dkihn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ int		ft_atoi(const char *str)
 
 	n = 1;
 	res = 0;
-	if (ft_strcmp(str, "4294967295") == 0)
+	if (ft_strcmp(str, "–9223372036854775808") >= 0 && (ft_strlen(str) >= 20))
+		return (0);
+	if (ft_strcmp(str, "9223372036854775807") >= 0 && (ft_strlen(str) >= 19))
 		return (-1);
 	while (*str == '\v' || *str == '\f' || *str == '\r' ||
 		*str == '\t' || *str == '\n' || *str == ' ')
@@ -37,10 +39,3 @@ int		ft_atoi(const char *str)
 	}
 	return (res * n);
 }
-//
-// int main()
-// {
-// 	printf("%d\n", atoi("4294967295"));
-// 	printf("%d\n", atoi("-2147483648"));
-// 	return (0);
-// }

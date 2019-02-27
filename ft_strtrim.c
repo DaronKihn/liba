@@ -6,7 +6,7 @@
 /*   By: dkihn <dkihn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/22 18:22:33 by dkihn             #+#    #+#             */
-/*   Updated: 2019/02/26 11:16:24 by dkihn            ###   ########.fr       */
+/*   Updated: 2019/02/27 17:28:50 by dkihn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,8 @@ char			*ft_strtrim(char const *s)
 		return (p);
 	}
 	else
-		p = (char *)malloc(sizeof(char) * (ft_strlen(s) - search_n(s) - search_k(s) + 1));
+		p = (char *)malloc(sizeof(char) * (ft_strlen(s) -
+		search_n(s) - search_k(s) + 1));
 	if (p)
 		return (f_copy(search_n(s), search_k(s), s, p));
 	else

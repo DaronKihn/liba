@@ -6,14 +6,14 @@
 /*   By: dkihn <dkihn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 18:03:12 by dkihn             #+#    #+#             */
-/*   Updated: 2019/02/20 19:31:56 by dkihn            ###   ########.fr       */
+/*   Updated: 2019/02/27 17:29:38 by dkihn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-static	int	proverka_otr(int n, int *otric)
+static	int		proverka_otr(int n, int *otric)
 {
 	if (n < 0)
 	{
@@ -25,7 +25,7 @@ static	int	proverka_otr(int n, int *otric)
 
 static	void	f_len(int n, int *len)
 {
-	int	numb;
+	int		numb;
 
 	numb = n;
 	if (numb == 0)
@@ -37,7 +37,7 @@ static	void	f_len(int n, int *len)
 	}
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	int		len;
 	char	*s;
@@ -51,7 +51,6 @@ char	*ft_itoa(int n)
 	otric = 0;
 	f_len(n, &len);
 	n2 = proverka_otr(n, &otric);
-	//printf("%d\n", n2);
 	if (otric)
 		len++;
 	if (!(s = (char*)malloc(sizeof(char) * (len + 1))))
@@ -66,15 +65,3 @@ char	*ft_itoa(int n)
 		s[0] = '-';
 	return (s);
 }
-/*int	main()
-{
-	int n;
-	int len;
-	len = 0;
-	n = 0;
-	f_len(n, &len);
-	printf("%d\n",len );
-	printf("%s\n", ft_itoa(n));
-	return (0);
-}
-*/
