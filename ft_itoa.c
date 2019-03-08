@@ -6,12 +6,11 @@
 /*   By: dkihn <dkihn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 18:03:12 by dkihn             #+#    #+#             */
-/*   Updated: 2019/02/27 17:29:38 by dkihn            ###   ########.fr       */
+/*   Updated: 2019/03/01 18:14:58 by dkihn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static	int		proverka_otr(int n, int *otric)
 {

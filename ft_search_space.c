@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_search_space.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dkihn <dkihn@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/28 18:57:27 by dkihn             #+#    #+#             */
-/*   Updated: 2018/12/24 20:19:23 by dkihn            ###   ########.fr       */
+/*   Created: 2019/03/03 16:07:09 by dkihn             #+#    #+#             */
+/*   Updated: 2019/03/03 16:29:22 by dkihn            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strcmp(const char *s1, const char *s2)
+char	*ft_search_space(char const *str)
 {
-	size_t				i;
-	const unsigned char	*s11;
-	const unsigned char	*s22;
-	i = 0;
+	char	*s;
+	size_t	ind;
 
-	s11 = (unsigned char *)s1;
-	s22 = (unsigned char *)s2;
-	while (*(s11 + i) && *(s22 + i) && (*(s11 + i) == *(s22 + i)))
-		i++;
-	if (*(s11 + i) && *(s22 + i))
-		return (*(s11 + i) - *(s22 + i));
-	if (*(s11 + i))
-		return(*(s11 + i));
-	if (*(s22 + i))
-		return(-*(s22 + i));
-	return (0);
+	ind = 0;
+	s = (char *)str;
+	while (*(s + ind) && *(s + ind) != ' ')
+		ind++;
+	while (*(s + ind) && *(s + ind) == ' ')
+		ind++;
+	if (*(s + ind) == '\0')
+		return (NULL);
+	return (s + ind);
 }
